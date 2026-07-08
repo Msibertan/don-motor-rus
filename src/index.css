@@ -388,6 +388,7 @@ main {
   font-weight: 500;
   color: rgba(243, 241, 236, 0.82);
   transition: color 0.25s, background 0.25s;
+  white-space: nowrap;
 }
 
 .nav__link:hover {
@@ -1293,6 +1294,44 @@ main {
   .team-photo--lg {
     width: 190px;
     height: 190px;
+  }
+}
+
+/* Реквизиты */
+.reqs {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.reqs__row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  padding: 18px 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.reqs__row:last-child {
+  border-bottom: none;
+}
+
+.reqs__row span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.reqs__row b {
+  font-weight: 600;
+  color: #e6e3dc;
+}
+
+@media (max-width: 600px) {
+  .reqs__row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 15px 18px;
   }
 }
 

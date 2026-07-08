@@ -28,7 +28,7 @@ export default function About() {
     <>
       <section className="page-head">
         <div className="page-head__bg">
-          <img src="/images/cta.jpg" alt="" />
+          <img src="/images/team-hero.jpg" alt="Команда Дон Мотор Рус" />
         </div>
         <div className="container page-head__inner">
           <span className="eyebrow">О компании</span>
@@ -97,6 +97,39 @@ export default function About() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <span className="eyebrow">Реквизиты</span>
+            <h2 className="h-section">Официально и прозрачно</h2>
+            <p>
+              Работаем как юридическое лицо — договор, официальная растаможка и
+              полный пакет документов на автомобиль.
+            </p>
+          </div>
+          <Reveal>
+            <div className="reqs">
+              {[
+                ['Полное наименование', 'ООО «Дон Мотор Рус»'],
+                ['Генеральный директор', 'Душкин Иван Александрович'],
+                ['ИНН', '7100060510'],
+                ['ОГРН', '1247100012301'],
+                ['КПП', '710001001'],
+                ['Дата регистрации', '26 декабря 2024 г.'],
+                ['Юридический адрес', '301637, Тульская обл., Узловский р-н, Индустриальный Парк, ул. Индустриальная, зд. 11, пом. 07-303'],
+                ['Основной вид деятельности', 'Розничная торговля легковыми автомобилями (ОКВЭД 45.11.2)'],
+                ['Уставный капитал', '10 000 ₽'],
+              ].map(([k, v]) => (
+                <div className="reqs__row" key={k}>
+                  <span>{k}</span>
+                  <b>{v}</b>
+                </div>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
     </>
