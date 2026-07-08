@@ -8,6 +8,7 @@ import Process from './pages/Process.jsx'
 import Calculator from './pages/Calculator.jsx'
 import Reviews from './pages/Reviews.jsx'
 import Contacts from './pages/Contacts.jsx'
+import About from './pages/About.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/process" element={<Process />} />
+          <Route path="/about" element={<About />} />
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contacts" element={<Contacts />} />

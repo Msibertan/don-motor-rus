@@ -6,6 +6,7 @@ const links = [
   { to: '/', label: 'Главная', end: true },
   { to: '/catalog', label: 'Каталог' },
   { to: '/process', label: 'Процесс' },
+  { to: '/about', label: 'О нас' },
   { to: '/calculator', label: 'Калькулятор' },
   { to: '/reviews', label: 'Отзывы' },
   { to: '/contacts', label: 'Контакты' },
