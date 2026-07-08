@@ -203,6 +203,11 @@ export default function Home() {
                       <span className="review__platform">{r.platform}</span>
                     ) : null}
                   </div>
+                  {r.car_image_url ? (
+                    <div className="review__img">
+                      <img src={r.car_image_url} alt="" loading="lazy" />
+                    </div>
+                  ) : null}
                   <p className="review__text">{r.text}</p>
                   <div className="review__author">
                     <div className="review__avatar">{(r.name || '—')[0]}</div>
