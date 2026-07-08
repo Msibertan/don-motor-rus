@@ -36,9 +36,9 @@ export default function Footer() {
 
           <div className="footer__col">
             <h5>Контакты</h5>
-            <a href="tel:+78005553535">8 800 555-35-35</a>
+            <a href="tel:+73422640087">+7 (342) 264-00-87</a>
             <a href="mailto:hello@donmotor.ru">hello@donmotor.ru</a>
-            <p>Ростов-на-Дону, пр. Стачки, 1</p>
+            <p>ул. Дзержинского 40, Гродно, Гродненская область, 230023, Беларусь</p>
             <div className="socials" style={{ marginTop: 14 }}>
               <a href="#" rel="noreferrer">
                 Telegram

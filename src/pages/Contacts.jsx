@@ -108,7 +108,7 @@ export default function Contacts() {
             <Reveal delay={100}>
               <div className="contact-card">
                 <h4>Телефон</h4>
-                <a href="tel:+78005553535" className="big accent">8 800 555-35-35</a>
+                <a href="tel:+73422640087" className="big accent">+7 (342) 264-00-87</a>
               </div>
               <div className="contact-card">
                 <h4>Почта</h4>
@@ -117,7 +117,7 @@ export default function Contacts() {
               <div className="contact-card">
                 <h4>Офис</h4>
                 <div className="big" style={{ fontSize: '1.2rem' }}>
-                  Ростов-на-Дону,<br />пр. Стачки, 1
+                  ул. Дзержинского 40, Гродно,<br />Гродненская область, 230023, Беларусь
                 </div>
                 <p className="note" style={{ marginTop: 10 }}>Ежедневно 9:00 — 21:00 МСК</p>
               </div>
