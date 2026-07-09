@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { sendLead } from '../lib/telegram.js'
 import { Link } from 'react-router-dom'
 import Reveal from '../components/Reveal.jsx'
 
@@ -54,7 +55,12 @@ export default function Calculator() {
       return
     }
     setError('')
-    // Здесь можно отправить заявку (Telegram / e-mail / CRM). Пока — разблокировка.
+    sendLead('Расчёт стоимости (калькулятор)', {
+      Имя: name || '—',
+      Телефон: phone,
+      'Стоимость авто, €': priceEur.toLocaleString('ru-RU'),
+      'Итог под ключ, ₽': Math.round(calc.total).toLocaleString('ru-RU'),
+    })
     setUnlocked(true)
   }
 

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Reveal from '../components/Reveal.jsx'
+import { sendLead } from '../lib/telegram.js'
 
 const empty = { name: '', phone: '', car: '', budget: '', comment: '' }
 
@@ -21,10 +22,13 @@ export default function Contacts() {
   const submit = (e) => {
     e.preventDefault()
     if (!validate()) return
-    const body = encodeURIComponent(
-      `Имя: ${form.name}\nТелефон: ${form.phone}\nАвто: ${form.car || '—'}\nБюджет: ${form.budget || '—'}\nКомментарий: ${form.comment || '—'}`
-    )
-    window.location.href = `mailto:info@motordon.ru?subject=Заявка%20с%20сайта&body=${body}`
+    sendLead('Заявка со страницы «Контакты»', {
+      Имя: form.name,
+      Телефон: form.phone,
+      Авто: form.car || '—',
+      Бюджет: form.budget || '—',
+      Комментарий: form.comment || '—',
+    })
     setSent(true)
   }
 
