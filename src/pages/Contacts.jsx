@@ -24,7 +24,7 @@ export default function Contacts() {
     const body = encodeURIComponent(
       `Имя: ${form.name}\nТелефон: ${form.phone}\nАвто: ${form.car || '—'}\nБюджет: ${form.budget || '—'}\nКомментарий: ${form.comment || '—'}`
     )
-    window.location.href = `mailto:hello@donmotor.ru?subject=Заявка%20с%20сайта&body=${body}`
+    window.location.href = `mailto:info@motordon.ru?subject=Заявка%20с%20сайта&body=${body}`
     setSent(true)
   }
 
@@ -112,7 +112,7 @@ export default function Contacts() {
               </div>
               <div className="contact-card">
                 <h4>Почта</h4>
-                <a href="mailto:hello@donmotor.ru" className="big">hello@donmotor.ru</a>
+                <a href="mailto:info@motordon.ru" className="big">info@motordon.ru</a>
               </div>
               <div className="contact-card">
                 <h4>Офис</h4>

@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="footer__col">
             <h5>Контакты</h5>
             <a href="tel:+73422640087">+7 (342) 264-00-87</a>
-            <a href="mailto:hello@donmotor.ru">hello@donmotor.ru</a>
+            <a href="mailto:info@motordon.ru">info@motordon.ru</a>
             <p>ул. Дзержинского 40, Гродно, Гродненская область, 230023, Беларусь</p>
             <div className="socials" style={{ marginTop: 14 }}>
               <a href="#" rel="noreferrer">
