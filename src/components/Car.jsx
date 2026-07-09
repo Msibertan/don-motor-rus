@@ -7,7 +7,7 @@ export default function Car({ car }) {
     car.image || (car.img ? `/images/${car.img}.jpg` : '/images/garage.jpg')
 
   return (
-    <Link to="/contacts" className="car">
+    <div className="car">
       <div className="car__media">
         {car.badge ? <span className="pill pill--accent car__badge">{car.badge}</span> : null}
         <img
@@ -45,7 +45,10 @@ export default function Car({ car }) {
             </span>
           ) : null}
         </div>
+        <Link to="/contacts" className="btn btn--primary car__cta">
+          Узнать подробнее <span className="arrow">→</span>
+        </Link>
       </div>
-    </Link>
+    </div>
   )
 }

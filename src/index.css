@@ -843,6 +843,12 @@ main {
   flex: 1;
 }
 
+.car__cta {
+  margin-top: auto;
+  width: 100%;
+  justify-content: center;
+}
+
 .car__name {
   font-family: var(--ui);
   font-weight: 700;
