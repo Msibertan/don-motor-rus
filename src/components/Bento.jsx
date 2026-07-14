@@ -80,7 +80,7 @@ export default function Bento() {
             <Doc />
           </span>
           <div className="mock-chips" style={{ marginRight: 30 }}>
-            {['Таможенная очистка', 'Утильсбор', 'Учёт в ГИБДД', 'Договор'].map((c) => (
+            {['Таможенная очистка', 'Учёт в ГИБДД', 'Договор'].map((c) => (
               <span className="mock-chip" key={c}>
                 <span className="mock-check"><Check /></span>
                 {c}
@@ -93,7 +93,7 @@ export default function Bento() {
       {/* 4 — Трекинг (wide) */}
       <div className="bento__cell bento__cell--wide">
         <h3>Доставка с трекингом</h3>
-        <p>Видите статус и геопозицию автомобиля на каждом этапе пути из Европы.</p>
+        <p>Видите статус и геопозицию автомобиля на каждом этапе пути из Германии.</p>
         <div className="bento__mock">
           <div className="mock-card">
             <div className="mock-route">

@@ -27,11 +27,8 @@ export default function Footer() {
           </div>
 
           <div className="footer__col">
-            <h5>Направления</h5>
-            <p>Германия</p>
-            <p>Польша</p>
-            <p>Литва · Латвия</p>
-            <p>Нидерланды</p>
+            <h5>Направление</h5>
+            <p>Германия → Россия</p>
           </div>
 
           <div className="footer__col">

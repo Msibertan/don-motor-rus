@@ -40,12 +40,11 @@ export default function Calculator() {
     const fuel = fuels[fuelIdx]
     const carRub = priceEur * RATE
     const duty = (carRub * age.duty + cc * 18) * fuel.k
-    const util = age.util
-    const clearance = 90000
+    const clearance = 90000 + age.util
     const delivery = 185000
     const commission = Math.max(carRub * 0.08, 120000)
-    const total = carRub + duty + util + clearance + delivery + commission
-    return { carRub, duty, util, clearance, delivery, commission, total }
+    const total = carRub + duty + clearance + delivery + commission
+    return { carRub, duty, clearance, delivery, commission, total }
   }, [priceEur, cc, ageIdx, fuelIdx])
 
   const submitLead = (e) => {
@@ -145,9 +144,8 @@ export default function Calculator() {
                 <div className="calc__breakdown">
                   <div className="calc__line"><span>Стоимость авто</span><b>{rub(calc.carRub)}</b></div>
                   <div className="calc__line"><span>Таможенная пошлина</span><b>{rub(calc.duty)}</b></div>
-                  <div className="calc__line"><span>Утилизационный сбор</span><b>{rub(calc.util)}</b></div>
-                  <div className="calc__line"><span>Оформление (СБКТС, ЭПТС)</span><b>{rub(calc.clearance)}</b></div>
-                  <div className="calc__line"><span>Логистика Европа → РФ</span><b>{rub(calc.delivery)}</b></div>
+                  <div className="calc__line"><span>Таможенная очистка</span><b>{rub(calc.clearance)}</b></div>
+                  <div className="calc__line"><span>Логистика Германия → РФ</span><b>{rub(calc.delivery)}</b></div>
                   <div className="calc__line"><span>Услуга «Дон Мотор Рус»</span><b>{rub(calc.commission)}</b></div>
                   <div className="calc__line total"><span>Всего</span><b>{rub(calc.total)}</b></div>
                 </div>
