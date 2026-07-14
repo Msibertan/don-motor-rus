@@ -80,7 +80,7 @@ export default function Bento() {
             <Doc />
           </span>
           <div className="mock-chips" style={{ marginRight: 30 }}>
-            {['ЭПТС', 'СБКТС', 'Таможня', 'Учёт в ГИБДД', 'Договор'].map((c) => (
+            {['Таможенная очистка', 'Утильсбор', 'Учёт в ГИБДД', 'Договор'].map((c) => (
               <span className="mock-chip" key={c}>
                 <span className="mock-check"><Check /></span>
                 {c}

@@ -128,8 +128,8 @@ export default function Contacts() {
               <div className="contact-card">
                 <h4>Мессенджеры</h4>
                 <div className="socials">
-                  <a href="#" rel="noreferrer">Telegram</a>
-                  <a href="#" rel="noreferrer">WhatsApp</a>
+                  <a href="https://telegram.me/donmotorrussupport" target="_blank" rel="noreferrer">Telegram</a>
+                  <a href="https://max.ru/u/f9LHodD0cOLDzLNMiVkrjCNfaWJWu-gsGPCqI57Sp63KPJJz_lELKgbLcWY" target="_blank" rel="noreferrer">Макс</a>
                 </div>
               </div>
             </Reveal>

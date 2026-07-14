@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
+import FloatingWidget from './components/FloatingWidget.jsx'
 
 export default function App() {
   const { pathname } = useLocation()
@@ -17,6 +18,7 @@ export default function App() {
         <Outlet />
       </main>
       <Footer />
+      <FloatingWidget />
     </>
   )
 }

@@ -40,11 +40,11 @@ export default function Footer() {
             <a href="mailto:info@motordon.ru">info@motordon.ru</a>
             <p>ул. Дзержинского 40, Гродно, Гродненская область, 230023, Беларусь</p>
             <div className="socials" style={{ marginTop: 14 }}>
-              <a href="#" rel="noreferrer">
+              <a href="https://telegram.me/donmotorrussupport" target="_blank" rel="noreferrer">
                 Telegram
               </a>
-              <a href="#" rel="noreferrer">
-                WhatsApp
+              <a href="https://max.ru/u/f9LHodD0cOLDzLNMiVkrjCNfaWJWu-gsGPCqI57Sp63KPJJz_lELKgbLcWY" target="_blank" rel="noreferrer">
+                Макс
               </a>
             </div>
           </div>
