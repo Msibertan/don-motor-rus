@@ -4,7 +4,7 @@ const senior = { name: 'Николай Сурков', role: 'Старший ме
 
 const team = [
   { name: 'Александр Зайцев', img: 'AlexandrZaytsev.webp' },
-  { name: 'Сергей Смирнов', img: 'SergeySmirnov.webp' },
+  { name: 'Сергей Ларин', img: 'SergeySmirnov.webp' },
   { name: 'Юрий Минин', img: 'YuriyMinin.webp' },
   { name: 'Невьявцев Олег', img: 'OlegRakotov.webp' },
   { name: 'Максим Кириенко', img: 'MaksimKirienko.webp' },
@@ -12,8 +12,8 @@ const team = [
   { name: 'Виктор Ушаков', img: 'ushakov.webp' },
   { name: 'Андрей Коваленко', img: 'KovalenkoAndrey.webp' },
   { name: 'Дмитрий Бондарь', img: 'bondar.webp' },
-  { name: 'Ветчанов Андрей', img: 'vetchanov.webp' },
-  { name: 'Дмитрий Лиховских', img: 'lihovskih.webp' },
+  { name: 'Дмитрий Лиховский', img: 'vetchanov.webp' },
+  { name: 'Ветчанов Андрей', img: 'lihovskih.webp' },
   { name: 'Помазан Юрий', img: 'pomazan.webp' },
   { name: 'Андрейцева Яна', img: 'andreeitseva.webp' },
   { name: 'Ольга Макарова', img: 'makarova.webp' },
