@@ -7,7 +7,7 @@ const team = [
   { name: 'Сергей Ларин', img: 'SergeySmirnov.webp' },
   { name: 'Юрий Минин', img: 'YuriyMinin.webp' },
   { name: 'Невьявцев Олег', img: 'OlegRakotov.webp' },
-  { name: 'Максим Кириенко', img: 'MaksimKirienko.webp' },
+  { name: 'Иван Хижина', img: 'IvanKhizhina.webp' },
   { name: 'Юрий Смирнов', img: 'YuriySmironv.webp' },
   { name: 'Виктор Ушаков', img: 'ushakov.webp' },
   { name: 'Андрей Коваленко', img: 'KovalenkoAndrey.webp' },
