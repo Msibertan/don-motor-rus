@@ -11,7 +11,7 @@ const team = [
   { name: 'Юрий Смирнов', img: 'YuriySmironv.webp' },
   { name: 'Виктор Ушаков', img: 'ushakov.webp' },
   { name: 'Андрей Коваленко', img: 'KovalenkoAndrey.webp' },
-  { name: 'Дмитрий Бондарь', img: 'bondar.webp' },
+  { name: 'Беляев Роман', img: 'belyaev.webp' },
   { name: 'Дмитрий Лиховский', img: 'lihovskih.webp' },
   { name: 'Ветчанов Андрей', img: 'vetchanov.webp' },
   { name: 'Помазан Юрий', img: 'pomazan.webp' },
