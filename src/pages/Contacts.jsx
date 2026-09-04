@@ -115,6 +115,10 @@ export default function Contacts() {
                 <a href="tel:+79949904317" className="big accent">+7 (994) 990-43-17</a>
               </div>
               <div className="contact-card">
+                <h4>Горячая линия</h4>
+                <a href="tel:+73422640087" className="big accent">+7 (342) 264-00-87</a>
+              </div>
+              <div className="contact-card">
                 <h4>Почта</h4>
                 <a href="mailto:info@motordon.ru" className="big">info@motordon.ru</a>
               </div>
