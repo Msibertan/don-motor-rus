@@ -40,9 +40,6 @@ export default function Footer() {
               <a href="https://telegram.me/donmotorrussupport" target="_blank" rel="noreferrer">
                 Telegram
               </a>
-              <a href="https://max.ru/u/f9LHodD0cOLDzLNMiVkrjCNfaWJWu-gsGPCqI57Sp63KPJJz_lELKgbLcWY" target="_blank" rel="noreferrer">
-                Макс
-              </a>
             </div>
           </div>
         </div>
