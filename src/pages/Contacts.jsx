@@ -112,10 +112,6 @@ export default function Contacts() {
             <Reveal delay={100}>
               <div className="contact-card">
                 <h4>Телефон</h4>
-                <a href="tel:+79949904317" className="big accent">+7 (994) 990-43-17</a>
-              </div>
-              <div className="contact-card">
-                <h4>Горячая линия</h4>
                 <a href="tel:+73422640087" className="big accent">+7 (342) 264-00-87</a>
               </div>
               <div className="contact-card">

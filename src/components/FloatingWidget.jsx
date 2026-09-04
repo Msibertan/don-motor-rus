@@ -59,7 +59,7 @@ export default function FloatingWidget() {
           </div>
         </a>
 
-        <a href="tel:+79949904317" className="floating-widget__item">
+        <a href="tel:+73422640087" className="floating-widget__item">
           <span className="floating-widget__label">Телефон</span>
           <div className="floating-widget__icon phone">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
