@@ -22,6 +22,7 @@ const team = [
   { name: 'Владимир Копытин', img: 'kopytin.webp' },
   { name: 'Виолетта Карнаухова', img: 'karnaukhova.webp' },
   { name: 'Пантин Игорь', img: 'pantin.webp' },
+  { name: 'Василенко Константин', img: 'vasilenko.webp' },
 ]
 
 export default function About() {
