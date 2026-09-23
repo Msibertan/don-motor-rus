@@ -3,24 +3,25 @@ import Reveal from '../components/Reveal.jsx'
 const senior = { name: 'Николай Сурков', role: 'Старший менеджер', img: 'NikolaySurkov.webp' }
 
 const team = [
+  { name: 'Коновалов Виктор Андреевич', role: 'Менеджер по оплатам', img: 'KonovalovViktor.webp' },
   { name: 'Александр Зайцев', img: 'AlexandrZaytsev.webp' },
   { name: 'Сергей Ларин', img: 'SergeySmirnov.webp' },
   { name: 'Юрий Минин', img: 'YuriyMinin.webp' },
   { name: 'Невьявцев Олег', img: 'OlegRakotov.webp' },
   { name: 'Иван Хижина', img: 'IvanKhizhina.webp' },
-  { name: 'Юрий Смирнов', img: 'YuriySmironv.webp' },
   { name: 'Виктор Ушаков', img: 'ushakov.webp' },
   { name: 'Андрей Коваленко', img: 'KovalenkoAndrey.webp' },
   { name: 'Беляев Роман', img: 'belyaev.webp' },
   { name: 'Дмитрий Лиховский', img: 'lihovskih.webp' },
   { name: 'Ветчанов Андрей', img: 'vetchanov.webp' },
   { name: 'Помазан Юрий', img: 'pomazan.webp' },
-  { name: 'Андрейцева Яна', img: 'andreeitseva.webp' },
+  { name: 'Сатонкина Ксения', img: 'satonkina.webp' },
   { name: 'Ольга Макарова', img: 'makarova.webp' },
   { name: 'Васнецова Анастасия', img: 'vasnetsova.webp' },
   { name: 'Дмитрий Якименко', img: 'yakimenko.webp' },
   { name: 'Владимир Копытин', img: 'kopytin.webp' },
   { name: 'Виолетта Карнаухова', img: 'karnaukhova.webp' },
+  { name: 'Пантин Игорь', img: 'pantin.webp' },
 ]
 
 export default function About() {
@@ -92,7 +93,7 @@ export default function About() {
                     <img src={`/team/${m.img}`} alt={m.name} loading="lazy" />
                   </div>
                   <h3>{m.name}</h3>
-                  <p>Менеджер</p>
+                  <p>{m.role || 'Менеджер'}</p>
                 </div>
               </Reveal>
             ))}
