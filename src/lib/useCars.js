@@ -1,9 +1,14 @@
 import { useEffect, useState } from 'react'
 import { supabase, mapCar } from './supabase.js'
-import { cars as fallbackCars } from '../data/cars.js'
 
-// Загружает авто из Supabase (таблица `cars`). При отсутствии настроек или ошибке
-// откатывается на статичные примеры, чтобы сайт не ломался.
+const TIMEOUT = 8000
+
+function withTimeout(promise, ms) {
+  return Promise.race([promise, new Promise((resolve) => setTimeout(() => resolve({ error: new Error('timeout') }), ms))])
+}
+
+// Загружает авто из Supabase (таблица `cars`). Если база недоступна,
+// не держим страницу в «Загружаем…», а показываем пустой каталог с предложением подбора.
 export function useCars({ limit } = {}) {
   const [cars, setCars] = useState([])
   const [loading, setLoading] = useState(true)
@@ -14,7 +19,7 @@ export function useCars({ limit } = {}) {
 
     async function load() {
       if (!supabase) {
-        setCars(fallbackCars)
+        setError('Каталог не настроен')
         setLoading(false)
         return
       }
@@ -25,16 +30,19 @@ export function useCars({ limit } = {}) {
         .order('created_at', { ascending: false })
       if (limit) query = query.limit(limit)
 
-      const { data, error } = await query
+      let res
+      try {
+        res = await withTimeout(query, TIMEOUT)
+      } catch (e) {
+        res = { error: e }
+      }
       if (!active) return
 
-      if (error) {
-        setError(error.message)
-        setCars(fallbackCars)
-      } else if (data && data.length) {
-        setCars(data.map(mapCar))
-      } else {
+      if (res.error) {
+        setError(res.error.message || 'Каталог временно недоступен')
         setCars([])
+      } else {
+        setCars((res.data || []).map(mapCar))
       }
       setLoading(false)
     }

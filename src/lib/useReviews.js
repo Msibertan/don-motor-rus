@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { supabase } from './supabase.js'
+import { photoReviews, videoReviews } from '../data/reviews.js'
 
 const norm = (s) => (s || '').toLowerCase().replace(/\s+/g, ' ').trim()
+const TIMEOUT = 8000
 
 function dedupe(arr, keyFn) {
   const seen = new Set()
@@ -14,7 +16,13 @@ function dedupe(arr, keyFn) {
   })
 }
 
+// Запрос с таймаутом: если база молчит, не держим страницу в «Загружаем…».
+function withTimeout(promise, ms) {
+  return Promise.race([promise, new Promise((resolve) => setTimeout(() => resolve({ error: new Error('timeout') }), ms))])
+}
+
 // Загружает отзывы из Supabase: текстовые (photo_reviews) и видео (video_reviews).
+// Если база недоступна или пуста, показывает резервную копию из src/data/reviews.js.
 export function useReviews({ photoLimit, videoLimit } = {}) {
   const [photos, setPhotos] = useState([])
   const [videos, setVideos] = useState([])
@@ -22,33 +30,30 @@ export function useReviews({ photoLimit, videoLimit } = {}) {
 
   useEffect(() => {
     let active = true
-    async function load() {
-      if (!supabase) {
-        setLoading(false)
-        return
-      }
-      const pq = supabase
-        .from('photo_reviews')
-        .select('*')
-        .order('created_at', { ascending: false })
-      const vq = supabase
-        .from('video_reviews')
-        .select('*')
-        .order('created_at', { ascending: false })
-
-      const [p, v] = await Promise.all([pq, vq])
+    const apply = (p, v) => {
       if (!active) return
-      if (!p.error && p.data) {
-        let list = dedupe(p.data, (r) => norm(r.text))
-        if (photoLimit) list = list.slice(0, photoLimit)
-        setPhotos(list)
-      }
-      if (!v.error && v.data) {
-        let list = dedupe(v.data, (r) => r.video_url)
-        if (videoLimit) list = list.slice(0, videoLimit)
-        setVideos(list)
-      }
+      let pl = dedupe(p, (r) => norm(r.text))
+      let vl = dedupe(v, (r) => r.video_url)
+      if (photoLimit) pl = pl.slice(0, photoLimit)
+      if (videoLimit) vl = vl.slice(0, videoLimit)
+      setPhotos(pl)
+      setVideos(vl)
       setLoading(false)
+    }
+
+    async function load() {
+      if (!supabase) return apply(photoReviews, videoReviews)
+      try {
+        const [p, v] = await Promise.all([
+          withTimeout(supabase.from('photo_reviews').select('*').order('created_at', { ascending: false }), TIMEOUT),
+          withTimeout(supabase.from('video_reviews').select('*').order('created_at', { ascending: false }), TIMEOUT),
+        ])
+        const pOk = !p.error && Array.isArray(p.data) && p.data.length > 0
+        const vOk = !v.error && Array.isArray(v.data) && v.data.length > 0
+        apply(pOk ? p.data : photoReviews, vOk ? v.data : videoReviews)
+      } catch {
+        apply(photoReviews, videoReviews)
+      }
     }
     load()
     return () => {

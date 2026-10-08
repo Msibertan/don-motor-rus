@@ -115,11 +115,11 @@ export default function Catalog() {
           ) : (
             <div className="empty">
               <h3 className="h-section" style={{ fontSize: '1.9rem' }}>
-                Ничего не нашлось
+                {error ? 'Каталог обновляется' : 'Ничего не нашлось'}
               </h3>
               <p style={{ marginTop: 12 }}>
                 {error
-                  ? 'Не удалось загрузить каталог. Попробуйте обновить страницу.'
+                  ? 'Мы обновляем подборку автомобилей. Опишите, что ищете, и мы пришлём варианты с ценами под ключ в течение дня.'
                   : 'Сбросьте фильтры или закажите подбор под ваш запрос.'}
               </p>
               <Link to="/contacts" className="btn btn--primary" style={{ marginTop: 24 }}>
