@@ -55,8 +55,8 @@ export default function Navbar() {
           </nav>
 
           <div className="nav__cta">
-            <a href="tel:+73422640087" className="nav__phone">
-              +7 (342) 264-00-87
+            <a href="tel:+74993253577" className="nav__phone">
+              +7 (499) 325-35-77
             </a>
             <Link to="/contacts" className="btn btn--primary">
               Заявка
@@ -88,8 +88,8 @@ export default function Navbar() {
           </NavLink>
         ))}
         <div className="mobile-menu__foot">
-          <a href="tel:+73422640087" className="big accent">
-            +7 (342) 264-00-87
+          <a href="tel:+74993253577" className="big accent">
+            +7 (499) 325-35-77
           </a>
           <span>Ежедневно 9:00 — 21:00 МСК</span>
         </div>
