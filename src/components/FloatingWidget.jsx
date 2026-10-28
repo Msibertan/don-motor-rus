@@ -34,7 +34,7 @@ export default function FloatingWidget() {
           </div>
         </a>
 
-        <a href="mailto:info@motordon.ru" className="floating-widget__item">
+        <a href="mailto:info@don-motor-rus.ru" className="floating-widget__item">
           <span className="floating-widget__label">Почта</span>
           <div className="floating-widget__icon mail">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

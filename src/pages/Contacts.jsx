@@ -116,7 +116,7 @@ export default function Contacts() {
               </div>
               <div className="contact-card">
                 <h4>Почта</h4>
-                <a href="mailto:info@motordon.ru" className="big">info@motordon.ru</a>
+                <a href="mailto:info@don-motor-rus.ru" className="big">info@don-motor-rus.ru</a>
               </div>
               <div className="contact-card">
                 <h4>Офис</h4>
